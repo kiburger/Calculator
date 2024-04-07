@@ -1,9 +1,9 @@
 function add(num1, num2) {
-  return Number((num1 + num2).toFixed(8));
+  return Number((num1 + num2).toFixed(7));
 }
 
 function subtract(num1, num2) {
-  return Number((num1 - num2).toFixed(8));
+  return Number((num1 - num2).toFixed(7));
 }
 
 function multiply(num1, num2) {
@@ -13,7 +13,7 @@ function multiply(num1, num2) {
 function divide(num1, num2) {
   if(num2 === 0) return 'ERROR!';
   let result = num1 / num2;
-  return Number(result.toFixed(8));
+  return Number(result.toFixed(7));
 }
 
 function operate(firstNum, operator, secondNum) {
@@ -46,6 +46,10 @@ let operator = '';
 for (const btn of numberBtns) {
   btn.addEventListener('click', (e) => {
     if (!operator) {
+      if(!firstNum && e.target.textContent === '.') {
+        //if decimal is first pressed, it displays 0.
+        displayValue = display.textContent = firstNum = '0';
+      }
       firstNum += e.target.textContent;
       displayValue = display.textContent = firstNum;
       console.log('The first number is ' + firstNum);
@@ -60,7 +64,7 @@ for (const btn of numberBtns) {
       document.getElementById('decimal').disabled = true;
       } else {
       document.getElementById('decimal').disabled = false;
-    }
+      }
   });
 }
 
