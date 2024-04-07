@@ -124,8 +124,6 @@ backspaceBtn.addEventListener('click', () => {
   }
 
   if(firstNum && operator) {
-    //let arr = displayValue.split('');
-   //arr.pop();
     secondNum = displayValue = display.textContent = arr.join('');
     console.log('WOW the second numbr goes back to ' + secondNum);
   }  
