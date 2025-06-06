@@ -8,6 +8,6 @@ This is a simple and intuitive calculator web tool that allows users to perform 
 - **Backspace** button to delete the last entered digit
 - **Clear** button to reset the entire calculation
 
-[Try it out here!](https://rui-23.github.io/Calculator/)
+[Try it out here!](https://kiburger.github.io/Calculator/)
 
 This calculator provides an efficient and user-friendly experience, making it easy to handle everyday math tasks right in the browser.
